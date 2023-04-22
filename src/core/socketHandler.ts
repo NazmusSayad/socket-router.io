@@ -1,4 +1,4 @@
-import { HandlerClient, HandlersEntries, HandlersList, Options } from './types'
+import { HandlerClient, HandlersEntries, HandlersList, Options } from '../types'
 
 function socketHandler(
   entries: HandlersEntries,
@@ -15,15 +15,15 @@ function socketHandler(
 
   try {
     const rv = handler(client, (err: any) => {
-      if (err) return conf.handleException(err)
+      if (err) return conf.handleException(err, client)
       socketHandler(entries, client, conf)
     })
 
     if (rv instanceof Promise) {
-      rv.catch(conf.handleException)
+      rv.catch((err) => conf.handleException(err, client))
     }
   } catch (err) {
-    conf.handleException(err)
+    conf.handleException(err, client)
   }
 }
 

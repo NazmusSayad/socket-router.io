@@ -1,8 +1,8 @@
 import { Namespace as RawNamespace } from 'socket.io'
-import { HandlersMap, Namespace, OptionsPartial } from './types'
-import { defaultOptions } from './config'
-import { createListCore } from './core/createListCore'
-import createClient from './core/createClient'
+import { HandlersMap, Namespace, OptionsPartial } from '../types'
+import { defaultOptions } from '../config'
+import { createListCore } from './createListCore'
+import createClient from './createClient'
 import socketHandler from './socketHandler'
 
 export function createRouter(namespace: Namespace, options?: OptionsPartial) {

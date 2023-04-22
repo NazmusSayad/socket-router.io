@@ -1,5 +1,5 @@
 {
-  "name": "io.router",
+  "name": "socket-router.io",
   "version": "0.0.0",
   "peerDependencies": {
     "socket.io": "*"

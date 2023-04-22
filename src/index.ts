@@ -1,2 +1,2 @@
-console.log('Hello, world!');
-export default 'Hello, world!';
+export * from './types'
+export * from './core/createRouter'

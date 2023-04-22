@@ -5,7 +5,7 @@ export type Namespace = RawNamespace
 
 export type OptionsPartial = Partial<Options>
 export interface Options {
-  handleException(err: any): void
+  handleException(err: any, client: HandlerClient): void
 }
 
 export type NextFn = (err?: any) => void

@@ -1,11 +1,9 @@
 {
   "name": "socket-router.io",
-  "version": "0.0.1",
-  "peerDependencies": {
-    "socket.io": "*"
-  },
+  "version": "0.0.2",
   "devDependencies": {
     "npm-ez": "^2.0.2",
+    "socket.io": "^4.6.1",
     "typescript": "^5.0.4"
   },
   "scripts": {

@@ -1,3 +1,7 @@
+import Router from './core/Router'
+
 export * from './types'
-export * from './core/createRouter'
-export { default } from './core/createRouter'
+export default Router
+export function createRouter() {
+  return new Router()
+}
